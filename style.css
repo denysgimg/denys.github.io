@@ -1,32 +1,27 @@
-/* style.css */
 body {
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    /* Приємний темний фон */
-    background-color: #0f172a;
-    background-image: radial-gradient(at 0% 0%, rgba(30, 58, 138, 0.5) 0, transparent 50%), 
-                      radial-gradient(at 50% 0%, rgba(76, 29, 149, 0.4) 0, transparent 50%);
-    color: #f1f5f9;
-    margin: 40px; /* Відступ від країв екрана */
-    line-height: 1.6;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
+    color: white;
+    margin: 50px; /* Відступ від краю екрана */
 }
 
-h1 {
+header h1 {
     font-size: 2.5rem;
     margin-bottom: 5px;
-    color: #fff;
 }
 
 header p {
-    color: #94a3b8;
     font-size: 1.1rem;
+    opacity: 0.8;
     margin-bottom: 40px;
 }
 
 h2 {
     font-size: 1.2rem;
+    margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #38bdf8; /* Блакитний акцент */
 }
 
 ul {
@@ -34,28 +29,27 @@ ul {
     list-style: none;
 }
 
-/* Стиль кнопки */
+/* Перетворюємо посилання на кнопку */
 li a {
     display: inline-block;
-    padding: 12px 24px;
-    background-color: #38bdf8;
-    color: #0f172a;
+    padding: 12px 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
     text-decoration: none;
     border-radius: 8px;
-    font-weight: 600;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
 }
 
-/* Ефект при наведенні */
 li a:hover {
-    background-color: #7dd3fc;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.3);
+    background-color: white;
+    color: #764ba2;
+    transform: translateX(10px); /* Кнопка трохи відсунеться вправо при наведенні */
 }
 
 footer {
-    margin-top: 50px;
+    margin-top: 60px;
+    font-size: 0.8rem;
     opacity: 0.6;
-    font-size: 0.9rem;
 }
