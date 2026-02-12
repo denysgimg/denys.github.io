@@ -1,55 +1,88 @@
+/* Скидання стандартних стилів */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Загальний фон */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    background-attachment: fixed;
-    color: white;
-    margin: 50px; /* Відступ від краю екрана */
+    background-color: #f2f4f8;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Верх */
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    border-bottom: 4px solid #1abc9c;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 5px;
+    font-size: 24px;
 }
 
 header p {
-    font-size: 1.1rem;
+    font-size: 14px;
     opacity: 0.8;
-    margin-bottom: 40px;
 }
 
-h2 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+/* Основна зона */
+main {
+    display: flex;
 }
 
+/* Ліва менюшка */
+section {
+    width: 280px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-right: 2px solid #e0e0e0;
+    min-height: calc(100vh - 140px);
+}
+
+section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* Список лабораторних */
 ul {
-    padding: 0;
     list-style: none;
 }
 
-/* Перетворюємо посилання на кнопку */
+li {
+    margin-bottom: 12px;
+}
+
+/* Кнопки-лабораторні */
 li a {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
+    display: block;
+    padding: 12px 15px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
     text-decoration: none;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(5px);
-    transition: all 0.3s ease;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    border-left: 5px solid #1abc9c;
 }
 
+/* Наведення */
 li a:hover {
-    background-color: white;
-    color: #764ba2;
-    transform: translateX(10px); /* Кнопка трохи відсунеться вправо при наведенні */
+    background-color: #dfe6e9;
+    transform: translateX(4px);
 }
 
+/* Футер */
 footer {
-    margin-top: 60px;
-    font-size: 0.8rem;
-    opacity: 0.6;
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
 }
