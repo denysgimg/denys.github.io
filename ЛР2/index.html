@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме - Денис Попадюк</title>
+    <style>
+        /* Базові стилі */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            color: #333;
+        }
+
+        /* Горизонтальне меню */
+        nav {
+            width: 100%;
+            background: #2c3e50;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline-block;
+        }
+        nav ul li a {
+            display: block;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            background: #34495e;
+        }
+
+        /* Сайдбар (ліва частина) */
+        .sidebar {
+            width: 300px;
+            background-color: #4a6b94;
+            color: white;
+            padding: 80px 30px 30px;
+            min-height: 100vh;
+        }
+
+        /* Кругле фото */
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%; /* Завдання 3: Кругле зображення */
+            border: 4px solid white;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 30px;
+        }
+
+        .sidebar h2 {
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+            font-size: 1.2em;
+            text-transform: uppercase;
+        }
+
+        /* Основна частина (права частина) */
+        .main-content {
+            flex: 1;
+            padding: 80px 50px 50px;
+            background: #fdfdfd;
+        }
+
+        .main-content h1 {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+
+        .section-title {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            color: #2c3e50;
+        }
+
+        .edu-item {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .date-range {
+            position: absolute;
+            right: 0;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        /* Стилізація блоку з HTML entities */
+        .entities-box {
+            background: #eee;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre;
+            margin-top: 20px;
+            border-left: 5px solid #4a6b94;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#personal">Особисті дані</a></li>
+            <li><a href="#education">Освіта</a></li>
+            <li><a href="#skills">Навички</a></li>
+            <li><a href="#code-structure">HTML Структура</a></li>
+        </ul>
+    </nav>
+
+    <aside class="sidebar" id="personal">
+        <img src="photo.jpg" alt="Богдан Турчак" class="profile-photo">
+
+        <h2>Особисті дані</h2>
+        <p><strong>Ім'я:</strong> Денис Попадюк</p>
+        <p><strong>Адреса:</strong> вул. Мазепи, буд. 183, м. Івано-Франківськ</p>
+        <p><strong>Телефон:</strong> +380980625331</p>
+        <p><strong>Email:</strong> dwplays03@gmail.com</p>
+
+        <h2>Інтереси</h2>
+        <ul>
+            <li>Програмування</li>
+            <li>Музика</li>
+            <li>Спорт</li>
+        </ul>
+
+        <h2>Мови</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li>Англійська — Середній рівень</li>
+            <li>Українська — Рідна</li>
+        </ul>
+    </aside>
+
+    <main class="main-content">
+        <h1>Денис Попадюк</h1>
+        <hr>
+
+        <h2 class="section-title" id="education">Освіта і кваліфікації</h2>
+        <div class="edu-item">
+            <span class="date-range">вер 2023 - лип 2028</span>
+            <strong>Фаховий молодший бакалавр</strong><br>
+            ВСП "Фаховий коледж електронних приладів ІФНТУНГ"<br>
+            Спеціальність "Інформаційні системи та технології"
+        </div>
+
+        <h2 class="section-title" id="skills">Навички</h2>
+        <ul>
+            <li>Мови програмування:
+                <ul>
+                    <li>C++</li>
+                    <li>Java</li>
+                </ul>
+            </li>
+            <li>Веб-технології: HTML, CSS</li>
+        </ul>
+
+        <h2 class="section-title">Мої роботи</h2>
+        <ol>
+            <li><a href="https://google.com" target="_blank">Проект Google</a></li>
+            <li>Корпоративний портал компанії</li>
+        </ol>
+
+        <h2 class="section-title" id="code-structure">Базова структура HTML</h2>
+        <p>Вивід структури документа за допомогою спеціальних символів:</p>
+        <div class="entities-box">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Заголовок&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- Контент сторінки --&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+        </div>
+    </main>
+
+</body>
+</html>
