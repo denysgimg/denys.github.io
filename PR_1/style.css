@@ -1,0 +1,136 @@
+
+header, section, footer, aside, nav, main, article, figure {
+    display: block; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    color: #333;
+    background: #fdfdfd;
+}
+
+/* Навігація */
+nav {
+    width: 100%;
+    background: #2c3e50;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background: #34495e;
+}
+
+/* Сайдбар */
+.sidebar {
+    width: 300px;
+    background-color: #4a6b94;
+    color: white;
+    padding: 80px 30px 30px;
+    min-height: 100vh;
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 30px;
+}
+
+.sidebar h2 {
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 10px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.languages-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Основний контент */
+.main-content {
+    flex: 1;
+    padding: 80px 50px 80px;
+}
+
+.main-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+.section-title {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    color: #2c3e50;
+}
+
+.edu-item {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.date-range {
+    position: absolute;
+    right: 0;
+    color: #777;
+    font-size: 0.9em;
+}
+
+/* Виділення навичок */
+mark {
+    background-color: #f1c40f;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Блок коду */
+.entities-box {
+    background: #eee;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: monospace;
+    white-space: pre;
+    margin-top: 20px;
+    border-left: 5px solid #4a6b94;
+}
+
+/* Футер */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #ecf0f1;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.8em;
+    border-top: 1px solid #ddd;
+}
