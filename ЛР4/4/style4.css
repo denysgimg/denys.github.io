@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-top: 50px;
+    background-color: #f0f0f0;
+}
+.battery {
+    width: 150px;
+    height: 70px;
+    border: 5px solid black;
+    border-radius: 5px;
+    position: relative;
+    background-color: white;
+    margin: 10px;
+}
+.battery::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    width: 10px;
+    height: 40px;
+    background-color: black;
+    border-radius: 0 5px 5px 0;
+}
+.battery::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+.low-charge::before {
+    width: 25%;
+    background-color: red;
+}
+.mid-charge::before {
+    width: 60%;
+    background-color: gold;
+}
+.high-charge::before {
+    width: 100%;
+    background-color: #00b050;
+}

@@ -1,0 +1,20 @@
+.lined-title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: serif;
+    font-size: 28px;
+    color: #333;
+}
+.lined-title::before,
+.lined-title::after {
+    content: "";
+    flex: 1;
+    border-bottom: 4px solid black;
+}
+.lined-title::before {
+    margin-right: 15px;
+}
+.lined-title::after {
+    margin-left: 15px;
+}
