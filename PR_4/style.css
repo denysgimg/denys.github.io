@@ -1,0 +1,404 @@
+/* Загальні налаштування сторінки */
+body {
+    background-color: #eeeeee;
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.shape-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 220px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.shape-wrapper span {
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#circle {
+    width: 120px;
+    height: 120px;
+    background-color: #746fdd;
+    border-radius: 50%;
+}
+
+#square {
+    width: 120px;
+    height: 120px;
+    background-color: #f447ff;
+}
+
+#rectangle {
+    width: 200px;
+    height: 100px;
+    background-color: #4242ff;
+}
+
+#oval {
+    width: 200px;
+    height: 100px;
+    background-color: #e9337c;
+    border-radius: 100px / 50px;
+}
+
+/* --- ТРИКУТНИКИ --- */
+
+#triangle {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 140px solid #fcf921;
+}
+
+#triangle_down {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-top: 140px solid #20a3bf;
+}
+
+#triangle_left {
+    width: 0;
+    height: 0;
+    border-top: 70px solid transparent;
+    border-bottom: 70px solid transparent;
+    border-right: 140px solid #6bbf20;
+}
+
+#triangle_right {
+    width: 0;
+    height: 0;
+    border-top: 70px solid transparent;
+    border-bottom: 70px solid transparent;
+    border-left: 140px solid #ff5a00;
+}
+
+/* --- СКЛАДНІ ФІГУРИ --- */
+
+#diamond {
+    width: 80px;
+    height: 80px;
+    background-color: #1eff00;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    margin-left: 80px;
+}
+
+#trapezium {
+    width: 100px;
+    height: 0;
+    border-bottom: 100px solid #ec3504;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+#parallelogram {
+    width: 150px;
+    height: 100px;
+    background-color: #8734f7;
+    transform: skew(30deg);
+}
+
+#hexagon {
+    width: 100px;
+    height: 55px;
+    background-color: #fc5e5e;
+    position: relative;
+    margin: 30px 0;
+}
+
+#hexagon:before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid #fc5e5e;
+}
+
+#hexagon:after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 25px solid #fc5e5e;
+}
+
+/* --- ЗІРКИ ТА П'ЯТИКУТНИКИ --- */
+#star-six {
+    width: 0;
+    height: 0;
+    position: relative;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #de34f7;
+}
+
+#star-six:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid #de34f7;
+    top: 30px;
+    left: -50px;
+}
+
+#pentagon {
+    position: relative;
+    width: 54px;
+    border-width: 50px 18px 0;
+    border-style: solid;
+    border-color: #277bab transparent;
+    margin-top: 30px;
+}
+
+#pentagon:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -85px;
+    left: -18px;
+    border-width: 0 45px 35px;
+    border-style: solid;
+    border-color: transparent transparent #277bab;
+}
+
+/* --- СПЕЦІАЛЬНІ ФІГУРИ --- */
+
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+
+#heart:before,
+#heart:after {
+    content: "";
+    position: absolute;
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background-color: #fc2e5a;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+#heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+#infinity {
+    position: relative;
+    width: 212px;
+    height: 100px;
+}
+
+#infinity:before,
+#infinity:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border: 20px solid #8734f7;
+    border-radius: 50px 50px 0 50px;
+    transform: rotate(-45deg);
+}
+
+#infinity:after {
+    left: auto;
+    right: 0;
+    border-radius: 50px 50px 50px 0;
+    transform: rotate(45deg);
+}
+
+#pacman {
+    width: 0;
+    height: 0;
+    border-right: 60px solid transparent;
+    border-top: 60px solid #fcf921;
+    border-left: 60px solid #fcf921;
+    border-bottom: 60px solid #fcf921;
+    border-radius: 60px;
+}
+
+#comment-bubble {
+    width: 120px;
+    height: 80px;
+    background-color: #4da;
+    position: relative;
+    border-radius: 10px;
+}
+
+#comment-bubble:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 30px;
+    border-width: 20px 20px 0;
+    border-style: solid;
+    border-color: #4da transparent;
+}
+
+/* --- ЗАВДАННЯ 2: МІШЕНЬ --- */
+
+.target-shadow {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: serif;
+    font-size: 40px;
+    color: black;
+    box-shadow: 0 0 0 50px yellow, 0 0 0 100px blue;
+    margin: 100px; /* Великий відступ, щоб тіні не обрізались */
+}
+
+.target-gradient {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: serif;
+    font-size: 40px;
+    color: black;
+    background: radial-gradient(circle, white 0%, white 33.33%, yellow 33.33%, yellow 66.66%, blue 66.66%, blue 100%);
+}
+
+#octagon {
+    width: 100px;
+    height: 100px;
+    background-color: #20b2aa;
+    position: relative;
+}
+
+#octagon:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 29px solid #20b2aa;
+    border-left: 29px solid #ffffff; /* Колір фону картки */
+    border-right: 29px solid #ffffff;
+    width: 42px;
+    height: 0;
+}
+
+#octagon:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 29px solid #20b2aa;
+    border-left: 29px solid #ffffff;
+    border-right: 29px solid #ffffff;
+    width: 42px;
+    height: 0;
+}
+
+/* --- ЗІРКА 5-КУТНА --- */
+#star-five {
+    margin: 40px 0;
+    position: relative;
+    display: block;
+    color: #ff9800;
+    width: 0px;
+    height: 0px;
+    border-right: 50px solid transparent;
+    border-bottom: 35px solid #ff9800;
+    border-left: 50px solid transparent;
+    transform: rotate(35deg);
+}
+
+#star-five:before {
+    border-bottom: 40px solid #ff9800;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -22.5px;
+    left: -32.5px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+}
+
+#star-five:after {
+    position: absolute;
+    display: block;
+    color: #ff9800;
+    top: 1.5px;
+    left: -52.5px;
+    width: 0px;
+    height: 0px;
+    border-right: 50px solid transparent;
+    border-bottom: 35px solid #ff9800;
+    border-left: 50px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+}
+
+/* --- П'ЯТИКУТНИК --- */
+#pentagon {
+    position: relative;
+    width: 54px;
+    box-sizing: content-box;
+    border-width: 50px 18px 0;
+    border-style: solid;
+    border-color: #277bab transparent;
+    margin-top: 40px;
+}
+
+#pentagon:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -85px;
+    left: -18px;
+    border-width: 0 45px 35px;
+    border-style: solid;
+    border-color: transparent transparent #277bab;
+}
