@@ -1,0 +1,84 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 50px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.pricing-card {
+    float: left;
+    width: 31%;
+    margin: 1%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.price-header th {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.plan-name td {
+    background-color: #f8f8f8;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.price-table tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    color: #666;
+    font-size: 14px;
+}
+
+.price-table tfoot td {
+    padding: 25px;
+}
+
+/* Кнопка SIGN UP */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.btn:hover {
+    background-color: #555;
+}

@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.pricing-card {
+    background: #ffffff;
+    width: 250px;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    border-top: 3px solid #00d873;
+    border-bottom: 3px solid #00d873;
+    text-align: center;
+}
+
+.card-header {
+    color: #00d873;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.card-price {
+    background-color: #00d873;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 15px 0;
+}
+
+.card-features {
+    list-style: none;
+}
+
+.card-features li {
+    padding: 12px 0;
+    color: #777777;
+    font-size: 14px;
+}
+
+.card-features li:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+.card-footer {
+    padding: 25px 0;
+}
+
+.btn-purchase {
+    background-color: #ffffff;
+    color: #00d873;
+    border: 2px solid #00d873;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-purchase:hover {
+    background-color: #00d873;
+    color: #ffffff;
+}

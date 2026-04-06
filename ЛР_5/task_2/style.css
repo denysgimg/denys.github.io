@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding: 20px;
+}
+
+h2 {
+    margin: 30px 0 10px;
+    font-size: 18px;
+}
+
+.main-title {
+    background-color: #6CC24A;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.students-table {
+    width: 100%;
+    max-width: 650px;
+    border-collapse: collapse;
+    border: 2px solid #000;
+}
+
+.students-table th, 
+.students-table td {
+    border: 1px solid #000;
+    padding: 4px 8px;
+    text-align: left;
+}
+
+.col-headers th {
+    background-color: #D4EDB6;
+    font-weight: normal;
+}
+
+.students-table tbody tr:nth-child(odd) {
+    background-color: #E6F5D0;
+}
+.students-table tbody tr:nth-child(even) {
+    background-color: #C1E995;
+}
+
+
+.float-table {
+    width: 100%;
+    max-width: 650px;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+}
+
+.float-row::after {
+    content: ""; 
+    display: table; 
+    clear: both; 
+}
+
+.float-cell {
+    float: left;
+    padding: 4px 8px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.float-row.col-headers .float-cell:nth-child(1), .float-row.data-row .float-cell:nth-child(1) { width: 15%; }
+.float-row.col-headers .float-cell:nth-child(2), .float-row.data-row .float-cell:nth-child(2) { width: 10%; }
+.float-row.col-headers .float-cell:nth-child(3), .float-row.data-row .float-cell:nth-child(3) { width: 14%; }
+.float-row.col-headers .float-cell:nth-child(4), .float-row.data-row .float-cell:nth-child(4) { width: 14%; }
+.float-row.col-headers .float-cell:nth-child(5), .float-row.data-row .float-cell:nth-child(5) { width: 14%; }
+.float-row.col-headers .float-cell:nth-child(6), .float-row.data-row .float-cell:nth-child(6) { width: 33%; }
+
+.float-table .float-row .float-cell.full-width {
+    width: 100%;
+    border-right: 2px solid #000;
+}
+
+.float-table .float-row .float-cell:last-child {
+    border-right: 2px solid #000; 
+}
+
+.float-table .float-row:last-child .float-cell {
+    border-bottom: 2px solid #000; 
+}
+
+.float-row.col-headers .float-cell {
+    background-color: #D4EDB6;
+}
+
+.float-row.data-row:nth-child(odd) .float-cell {
+    background-color: #E6F5D0;
+}
+.float-row.data-row:nth-child(even) .float-cell {
+    background-color: #C1E995;
+}
