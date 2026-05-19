@@ -1,0 +1,296 @@
+:root {
+    --primary-font: 'Raleway', sans-serif;
+    --accent-color: #ff5e99;
+    --dark-bg: #3c444d;
+    --text-muted: #888;
+    --container-width: 1100px;
+}
+
+/* Базові налаштування */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: var(--primary-font); 
+    line-height: 1.6; 
+    color: #333;
+    overflow-x: hidden; /* Гарантує, що ніщо не "розпирає" екран вправо */
+    width: 100%;
+}
+
+/* Утиліти */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.section { 
+    padding: 40px 0; 
+    text-align: center; 
+}
+
+.section__title { 
+    font-size: 1.8rem; 
+    margin-bottom: 30px; 
+    word-wrap: break-word; 
+    font-weight: 700;
+}
+
+/* ==================== СТИЛІ ДЛЯ МОБІЛЬНИХ (За замовчуванням) ==================== */
+
+/* Шапка */
+.header { 
+    padding: 15px 0; 
+    border-bottom: 1px solid #eee; 
+    width: 100%;
+}
+
+.header__inner { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px;
+    align-items: center; 
+}
+
+.logo { 
+    font-size: 1.4rem; 
+    color: #5a9cb3; 
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.nav__link { 
+    text-decoration: none; 
+    color: #777; 
+    font-size: 0.9rem; 
+}
+
+/* Hero section - ГАРАНТОВАНО НА ВСЮ ШИРИНУ */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('img/jumbotron.jpg') no-repeat center/cover;
+    height: 380px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;       /* Використовуємо 100% ширини видимого екрану */
+    position: relative; /* Щоб гарантувати розтягування фону */
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.hero__content { 
+    text-align: center; 
+    padding: 0 15px;
+    width: 100%;
+    max-width: var(--container-width); /* Вміст всередині фону центрований */
+    margin: 0 auto;
+}
+
+.hero__title { 
+    color: white; 
+    font-size: 2.2rem; 
+    margin-bottom: 25px; 
+    font-weight: 300; 
+    word-wrap: break-word;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Покращує читання білого тексту */
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    max-width: 90%;
+}
+.btn:hover { background-color: #e54d86; }
+
+/* Секція Послуг (Services) */
+.services { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 40px; /* Збільшений відступ між іконками */
+    margin-top: 20px; 
+    padding: 0 15px;
+}
+
+.service-item { 
+    flex: 1; 
+    width: 100%;
+}
+
+.service-item__icon {
+    font-size: 45px; 
+    color: #999;    
+    margin-bottom: 15px;
+    display: block;
+}
+
+.service-item__text { 
+    color: #888; 
+    font-size: 0.95rem; 
+    line-height: 1.5; 
+    word-wrap: break-word;
+}
+
+/* Блог */
+.blog { 
+    margin-top: 20px; 
+    width: 100%;
+    padding: 0 15px;
+}
+
+.blog-post { 
+    display: flex; 
+    flex-direction: column; 
+    text-align: left; 
+    margin-bottom: 50px; 
+    gap: 20px; 
+    width: 100%;
+}
+
+.blog-post__img { 
+    width: 100%; 
+    max-width: 100%; 
+    height: auto; 
+    max-height: 280px;
+    object-fit: cover; 
+}
+
+.blog-post__content { 
+    flex: 1; 
+    width: 100%;
+}
+
+.blog-post__title { 
+    font-size: 1.4rem; 
+    margin-bottom: 10px; 
+    color: #444; 
+    word-wrap: break-word;
+}
+
+.blog-post__date { 
+    color: #bbb; 
+    font-size: 0.85rem; 
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+.blog-post__text { 
+    color: #777; 
+    font-size: 1rem; 
+    word-wrap: break-word; 
+}
+
+/* Футер */
+.footer { 
+    background-color: var(--dark-bg); 
+    color: #fff; 
+    text-align: center; 
+    padding: 40px 0; 
+    width: 100%;
+}
+
+.footer__logo { 
+    font-size: 1.4rem; 
+    margin-bottom: 20px; 
+    font-weight: 300; 
+}
+
+.footer__nav { 
+    margin-bottom: 25px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer__nav a { 
+    color: #999; 
+    text-decoration: none; 
+    font-size: 0.9rem; 
+}
+.footer__nav a:hover { color: #fff; }
+.footer__copy { font-size: 0.75rem; color: #555; }
+
+
+/* ==================== МЕДІА-ЗАПИТИ ДЛЯ ДЕСКТОПІВ (від 768px і більше) ==================== */
+
+@media screen and (min-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .section__title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .header__inner {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav {
+        gap: 0;
+        width: auto;
+    }
+
+    .nav__link {
+        margin-left: 20px;
+    }
+
+    .hero {
+        height: 450px;
+        width: 100%; /* Повертаємо стандартну ширину на десктопах */
+    }
+
+    .hero__title {
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+
+    .services {
+        flex-direction: row;
+        gap: 40px;
+        padding: 0;
+    }
+
+    .blog {
+        padding: 0;
+    }
+
+    .blog-post {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .blog-post__img {
+        width: 320px;
+        height: 220px;
+    }
+
+    .blog-post__title {
+        font-size: 1.6rem;
+    }
+
+    .footer__nav {
+        gap: 30px;
+    }
+}
